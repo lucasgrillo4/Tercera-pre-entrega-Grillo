@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>    
+    <p> Estamos buscando el: {{nombreCentral}}</p>
+    {% if centrales%}
+    <ul>
+    {% for central in centrales%}
+        <li>La central es: {{central.nombreCentral}}</li>
+        <li>Tiene {{central.cantidadContratos}} contratos</li>
+    {% endfor %}
+    {%else%}
+        <p style = "color: red;"> La central no exsite </p>
+    
+    </ul>
+
+    {% endif %}
+</body>
+</html>   
+{% endblock %}

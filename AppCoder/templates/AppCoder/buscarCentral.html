@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>
+    <h1> Indique la Central que Busca </h1>
+    <form action = "/AppCoder/buscar" method ="GET">
+        <input type="text" name="nombreCentral" id ="nombreCentral">
+
+        <input type="submit" value ="Buscar">
+
+</html>   
+{% endblock %}
